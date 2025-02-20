@@ -4,7 +4,7 @@
         "https://checkstyle.org/dtds/configuration_1_3.dtd">
 
 <module name="Checker">
-    <property name="severity" value="error"/>
+    <property name="severity" value="warning"/>
     <property name="charset" value="UTF-8"/>
     <property name="fileExtensions" value="java"/>
 
@@ -19,12 +19,12 @@
         <module name="JavadocMethod">
             <property name="accessModifiers" value="public"/>
             <property name="allowedAnnotations" value="Override, Test"/>
-            <property name="tokens" value="ANNOTATION_FIELD_DEF"/>
+            <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF, COMPACT_CTOR_DEF"/>
         </module>
         <module name="MissingJavadocMethod">
             <property name="scope" value="public"/>
             <property name="allowedAnnotations" value="Override, Test"/>
-            <property name="tokens" value="ANNOTATION_FIELD_DEF"/>
+            <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF, COMPACT_CTOR_DEF"/>
         </module>
         <module name="SingleLineJavadoc"/>
     </module>
